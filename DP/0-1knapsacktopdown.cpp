@@ -27,7 +27,6 @@ int main()
     int w=10,n=5;
     int wt[n]={4,5,2,7,1};
     int val[n]={4,8,2,9,7};
-    int k = knapsack0_1(wt,val,w,n);
-    cout<<k<<endl;
+    cout<<knapsack0_1(wt,val,w,n);
     return 0;
 }

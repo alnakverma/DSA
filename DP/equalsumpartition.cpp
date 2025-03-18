@@ -1,8 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-bool t[1001][1001]; 
-bool sumofsubset(int arr[], int sum, int n){
+
+bool equalsumpartition(int arr[], int n){
+    int sum = 0;
+    bool t[n+1][sum+1]; 
+    for(int i=0; i<n; i++){
+        sum = sum + arr[i];
+    }
+    if(sum % 2 != 0) cout<<false<<endl;
+    else sum = sum/2;
     for(int i=0; i<=n; i++){
         for(int j=0; j<=sum; j++){
             if(j == 0) t[i][j] = true;
@@ -26,12 +33,7 @@ int main()
 {
     int n=5;
     int arr[n]={4,8,2,7,1};
-    int sum = 0;
-    for(int i=0; i<n; i++){
-        sum = sum + arr[i];
-    }
-    if(sum % 2 != 0) cout<<false<<endl;
-    else cout<<sumofsubset(arr,sum/2,n)<<endl;
+    cout<<equalsumpartition(arr,n)<<endl;
     return 0;
 }
 
