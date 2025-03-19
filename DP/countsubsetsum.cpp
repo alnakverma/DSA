@@ -2,7 +2,7 @@
 using namespace std;
 
 int t[1001][1001]; 
-int sumofsubset(int arr[], int sum, int n){
+int countsubsetsum(int arr[], int sum, int n){
     for(int i=0; i<=n; i++){
         for(int j=0; j<=sum; j++){
             if(j == 0) t[i][j] = true;
@@ -26,7 +26,7 @@ int main()
 {
     int sum=10,n=6;
     int arr[n]={2,3,5,6,8,10};
-    cout<<sumofsubset(arr,sum,n)<<endl;
+    cout<<countsubsetsum(arr,sum,n)<<endl;
     return 0;
 }
 
