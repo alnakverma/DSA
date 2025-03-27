@@ -10,7 +10,7 @@ int countsubsetsum(int arr[], int sum, int n){
         }
     }
     for(int i=1; i<=n; i++){
-        for(int j=1; j<=sum; j++){
+        for(int j=0; j<=sum; j++){
             if(arr[i-1]<=j){
                 t[i][j] = t[i-1][j-arr[i-1]] + t[i-1][j];
             }
@@ -24,8 +24,8 @@ int countsubsetsum(int arr[], int sum, int n){
 
 int main()
 {
-    int sum=10,n=6;
-    int arr[n]={2,3,5,6,8,10};
+    int sum=13,n=59;
+    int arr[n]={0, 2, 3, 1, 4, 5, 2, 3, 1, 2, 2, 5, 5, 0, 8, 2, 7, 6, 6, 9, 8, 8, 9, 1, 5, 6, 2, 2 ,5 ,9 ,1 ,5 ,0 ,4 ,6 ,3 ,9 ,6 ,9, 7, 6, 3, 3, 9, 7, 2, 9, 9, 2, 6, 1, 3, 4, 7, 4, 6, 6, 2, 6};
     cout<<countsubsetsum(arr,sum,n)<<endl;
     return 0;
 }
