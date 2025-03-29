@@ -28,3 +28,21 @@ int main(){
     cout<<getSecondLargest(arr)<<endl;
     return 0;
 }
+
+//Output: 34
+// Explanation: The largest element of the array is 35 and the second largest element is 34.
+
+
+// Complexity Analysis:
+// Time Complexity: O(N)
+// Space Complexity: O(1)
+
+
+/* Approach:
+1. Initialize two variables lar and ans to -1. lar will store the largest element and ans will 
+    store the second largest element.
+2. Traverse the array and find the largest element lar.
+3. Traverse the array again and find the second largest element ans which is not equal to lar.
+4. Return ans as the second largest element.
+5. If the second largest element doesn't exist, return -1. 
+*/
