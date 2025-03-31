@@ -34,16 +34,16 @@ int main() {
     return 0;
 }
 
-// Output: [1, 2, 4, 3, 5, 0, 0, 0]
-// Explanation: There are three 0s that are moved to the end.
+/* Output: [1, 2, 4, 3, 5, 0, 0, 0]
+Explanation: There are three 0s that are moved to the end.
 
 
-// Complexity Analysis:
-// Time Complexity: O(N)   
-// Space Complexity: O(1)
+Complexity Analysis:
+Time Complexity: O(N)   
+Space Complexity: O(1)
 
 
-/*Approach:
+Approach:
 1. Initialize two pointers i and j to 0.
 2. Traverse the array using the i pointer.
 3. If the current element arr[i] is not equal to 0, swap arr[i] with arr[j] and increment j.

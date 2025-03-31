@@ -30,16 +30,16 @@ int main() {
     return 0;
 }
 
-// Output: [5, 6, 2, 3, 4, 1]
-// Explanation: The array is reversed in place.
+/* Output: [5, 6, 2, 3, 4, 1]
+Explanation: The array is reversed in place.
 
 
-//Complexity Analysis:
-//Time Complexity: O(N)
-//Space Complexity: O(1)
+Complexity Analysis:
+Time Complexity: O(N)
+Space Complexity: O(1)
 
 
-/* Approach:
+ Approach:
 1. Initialize two pointers i and j to 0 and n-1 respectively.
 2. While i is less than j, swap arr[i] with arr[j].
 3. Increment i and decrement j in each iteration.

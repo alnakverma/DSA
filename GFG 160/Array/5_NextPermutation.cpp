@@ -47,16 +47,16 @@ int main() {
     return 0;
 }
 
-// Output: [2, 4, 5, 0, 1, 7]
-// Explanation: The next permutation of the given array is [2, 4, 5, 0, 1, 7].
+/* Output: [2, 4, 5, 0, 1, 7]
+Explanation: The next permutation of the given array is [2, 4, 5, 0, 1, 7].
 
 
-// Complexity Analysis:
-// Time Complexity: O(N)
-// Space Complexity: O(1)
+Complexity Analysis:
+Time Complexity: O(N)
+Space Complexity: O(1)
 
 
-/* Approach:   
+ Approach:   
 1. Initialize a pivot variable p to -1. This variable will store the index of the first element 
    from the right that is smaller than its next element.
 2. Traverse the array from right to left and find the first element arr[i] that is smaller than 

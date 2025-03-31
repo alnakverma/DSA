@@ -33,18 +33,18 @@ int main() {
     return 0;
 }
 
-// Output: [5, 6]
-// Explanation: The candidates that have votes greater than one-third of the total votes are 5 and 6.
+/* Output: [5, 6]
+Explanation: The candidates that have votes greater than one-third of the total votes are 5 and 6.
 
 
 
-// Complexity Analysis:
-// Time Complexity: O(NlogN)
-// Space Complexity: O(N)
+Complexity Analysis:
+Time Complexity: O(NlogN)
+Space Complexity: O(N)
 
 
 
-/* Approach:
+ Approach:
 1. Create a hash map to store the frequency of each element in the array.
 2. Traverse the array and update the frequency of each element in the hash map.
 3. Initialize an empty vector to store the result.

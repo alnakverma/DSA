@@ -29,16 +29,16 @@ int main(){
     return 0;
 }
 
-//Output: 34
-// Explanation: The largest element of the array is 35 and the second largest element is 34.
+/* Output: 34
+Explanation: The largest element of the array is 35 and the second largest element is 34.
 
 
-// Complexity Analysis:
-// Time Complexity: O(N)
-// Space Complexity: O(1)
+Complexity Analysis:
+Time Complexity: O(N)
+Space Complexity: O(1)
 
 
-/* Approach:
+Approach:
 1. Initialize two variables lar and ans to -1. lar will store the largest element and ans will 
     store the second largest element.
 2. Traverse the array and find the largest element lar.

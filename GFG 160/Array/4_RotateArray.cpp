@@ -29,16 +29,16 @@ int main() {
     return 0;
 }
 
-// Output: [3, 4, 5, 1, 2]
-// Explanation: The array is rotated to the left by 2 steps.
+/* Output: [3, 4, 5, 1, 2]
+Explanation: The array is rotated to the left by 2 steps.
 
 
-// Complexity Analysis:
-// Time Complexity: O(N)
-// Space Complexity: O(1)
+Complexity Analysis:
+Time Complexity: O(N)
+Space Complexity: O(1)
 
 
-/* Approach:   
+Approach:   
 1. Calculate the effective number of rotations needed by taking d modulo n (d = d % n).
 2. Reverse the first d elements of the array.
 3. Reverse the remaining n - d elements of the array.
