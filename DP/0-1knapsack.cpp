@@ -1,17 +1,20 @@
+
 #include<bits/stdc++.h>
 using namespace std;
 
 int t[1001][1001]; 
-int sumofsubset(int wt[], int val[], int w, int n){
+int knapsack(int wt[], int val[], int w, int n){
+    if(w==0 || n==0) return 0;
+    if(t[n][w] != -1) return t[n][w];
+    
     if(wt[n-1] <= w){
-        return t[n][w] = sumofsubset(wt,val,w-wt[n-1],n-1),sumofsubset(wt,val,w,n-1);
+        t[n][w] = max(val[n-1] + knapsack(wt, val, w-wt[n-1], n-1), knapsack(wt, val, w, n-1));
     }
-    else if(wt[n-1]>w){
-        return t[n][w] = sumofsubset(wt,val,w,n-1);
+    else{
+        t[n][w] = knapsack(wt, val, w, n-1);
     }
-    return 0;
+    return t[n][w];
 }
-
 
 int main()
 {
@@ -19,7 +22,7 @@ int main()
     int w=10,n=5;
     int wt[n]={4,5,2,7,1};
     int val[n]={4,8,2,9,7};
-    int k = sumofsubset(wt,val,w,n);
+    int k = knapsack(wt,val,w,n);
     cout<<k<<endl;
     return 0;
 }
