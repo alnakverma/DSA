@@ -2,7 +2,8 @@
 using namespace std;
 
 
-bool equalsumpartition(int arr[], int n){
+bool equalsumpartition(vector<int>& arr){
+    int n = arr.size();
     int sum = 0;
     bool t[n+1][sum+1]; 
     for(int i=0; i<n; i++){
@@ -31,9 +32,8 @@ bool equalsumpartition(int arr[], int n){
 
 int main()
 {
-    int n=5;
-    int arr[n]={4,8,2,7,1};
-    cout<<equalsumpartition(arr,n)<<endl;
+    vector<int> arr = {4,8,2,7,1};
+    cout<<equalsumpartition(arr)<<endl;
     return 0;
 }
 

@@ -2,8 +2,9 @@
 using namespace std;
 
 bool t[1001][1001]; 
-int minsubsetsumdiff(int arr[], int sum, int n){
+int minsubsetsumdiff(vector<int>& arr, int sum){
     //subset sum code
+    int n = arr.size();
     vector<int> temp;
     for(int i=0; i<=n; i++){
         for(int j=0; j<=sum; j++){
@@ -35,11 +36,11 @@ int minsubsetsumdiff(int arr[], int sum, int n){
 int main()
 {
     int sum = 0, n = 3;
-    int arr[n] = {1,2,5};
+    vector<int> arr = {1,2,5};
     for(int i=0; i<n; i++){
         sum+=arr[i];
     }
-    cout<<minsubsetsumdiff(arr,sum,n)<<endl;
+    cout<<minsubsetsumdiff(arr,sum)<<endl;
     return 0;
 }
 

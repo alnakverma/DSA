@@ -2,7 +2,8 @@
 using namespace std;
 
 int t[1001][1001]; 
-int unboundedknapsack(int wt[], int val[], int w, int n){
+int unboundedknapsack(vector<int>& wt, vector<int>& val, int w){
+    int n = val.size();
     for(int i=1; i<n+1; i++){
         for(int j=1; j<w+1; j++){
             if(i==0 || j==0) t[i][j]=0;
@@ -25,9 +26,9 @@ int unboundedknapsack(int wt[], int val[], int w, int n){
 int main()
 {
     int w=10,n=5;
-    int wt[n]={4,5,2,7,1};
-    int val[n]={4,8,2,9,7};
-    int k = unboundedknapsack(wt,val,w,n);
+    vector<int> wt = {4,5,2,7,1};
+    vector<int> val = {4,8,2,9,7};
+    int k = unboundedknapsack(wt,val,w);
     cout<<k<<endl;
     return 0;
 }

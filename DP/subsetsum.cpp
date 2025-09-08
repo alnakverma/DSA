@@ -2,7 +2,8 @@
 using namespace std;
 
 bool t[1001][1001]; 
-bool sumofsubset(int arr[], int sum, int n){
+bool sumofsubset(vector<int>& arr, int sum){
+    int n = arr.size();
     for(int i=0; i<=n; i++){
         for(int j=0; j<=sum; j++){
             if(j == 0) t[i][j] = true;
@@ -25,8 +26,8 @@ bool sumofsubset(int arr[], int sum, int n){
 int main()
 {
     int sum=20,n=5;
-    int arr[n]={4,8,2,7,1};
-    cout<<sumofsubset(arr,sum,n)<<endl;
+    vector<int> arr = {4,8,2,7,1};
+    cout<<sumofsubset(arr,sum)<<endl;
     return 0;
 }
 

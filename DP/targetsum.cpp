@@ -3,7 +3,8 @@
 using namespace std;
 
 int t[1001][1001]; 
-int targetsum(int arr[], int target, int n){
+int targetsum(vector<int>& arr, int target){
+    int n = arr.size();
     for(int i=0; i<=n; i++){
         for(int j=0; j<=target; j++){
             if(j == 0) t[i][j] = true;
@@ -26,13 +27,13 @@ int targetsum(int arr[], int target, int n){
 int main()
 {
     int diff=1, n=5;
-    int arr[n]={1, 2, 3, 1, 2};
+    vector<int> arr = {1, 2, 3, 1, 2};
     int sum =0;
     for(int i=0; i<n; i++){
         sum+=arr[i];
     }
     int target = (sum + diff)/2;
-    cout<<targetsum(arr,target,n)<<endl;
+    cout<<targetsum(arr,target)<<endl;
     return 0;
 }
 

@@ -2,7 +2,8 @@
 using namespace std;
 
 int t[1001][1001]; 
-int countsubsetdiff(int arr[], int k, int n){
+int countsubsetdiff(vector<int>& arr, int k){
+    int n = arr.size();
     for(int i=0; i<=n; i++){
         for(int j=0; j<=k; j++){
             if(j == 0) t[i][j] = true;
@@ -25,14 +26,14 @@ int countsubsetdiff(int arr[], int k, int n){
 int main()
 {
     int diff=1, n=5;
-    int arr[n]={1, 2, 3, 1, 2};
+    vector<int> arr={1, 2, 3, 1, 2};
     int sum =0;
     for(int i=0; i<n; i++){
         sum+=arr[i];
     }
     if((sum+diff) % 2 != 0 || sum < diff) cout<<0<<endl;
     int k = (sum + diff)/2;
-    cout<<countsubsetdiff(arr,k,n)<<endl;
+    cout<<countsubsetdiff(arr,k)<<endl;
     return 0;
 }
 
