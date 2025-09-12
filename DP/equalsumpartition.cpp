@@ -10,6 +10,7 @@ bool equalsumpartition(vector<int>& arr){
         sum = sum + arr[i];
     }
     if(sum % 2 != 0) cout<<false<<endl;
+    
     else sum = sum/2;
     for(int i=0; i<=n; i++){
         for(int j=0; j<=sum; j++){

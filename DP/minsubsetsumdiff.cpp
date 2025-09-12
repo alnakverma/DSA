@@ -1,10 +1,36 @@
+/*
+You are given an integer array nums of 2 * n integers. You need to partition nums into two arrays of 
+length n to minimize the absolute difference of the sums of the arrays. To partition nums, put each 
+element of nums into one of the two arrays. Return the minimum possible absolute difference.
+
+Example 1:
+Input: nums = [3,9,7,3]
+Output: 2
+Explanation: One optimal partition is: [3,9] and [7,3].
+The absolute difference between the sums of the arrays is abs((3 + 9) - (7 + 3)) = 2.
+
+
+Constraints:
+
+1 <= n <= 15
+nums.length == 2 * n
+-10^7 <= nums[i] <= 10^7
+*/
+
+
+
+
 #include<bits/stdc++.h>
 using namespace std;
 
-bool t[1001][1001]; 
-int minsubsetsumdiff(vector<int>& arr, int sum){
+int minsubsetsumdiff(vector<int>& arr){
     //subset sum code
     int n = arr.size();
+    int sum = 0;
+    for(int i=0; i<n; i++){
+        sum+=arr[i];
+    }
+    bool t[n+1][sum+1]; 
     vector<int> temp;
     for(int i=0; i<=n; i++){
         for(int j=0; j<=sum; j++){
@@ -27,6 +53,7 @@ int minsubsetsumdiff(vector<int>& arr, int sum){
     }
     //Finding the minimum subset sum difference
     int mn = INT_MAX;
+    n = temp.size();
     for(int i=0; i<n; i++){
         mn = min(mn, sum-2*temp[i]);
     }
@@ -35,12 +62,8 @@ int minsubsetsumdiff(vector<int>& arr, int sum){
 
 int main()
 {
-    int sum = 0, n = 3;
     vector<int> arr = {1,2,5};
-    for(int i=0; i<n; i++){
-        sum+=arr[i];
-    }
-    cout<<minsubsetsumdiff(arr,sum)<<endl;
+    cout<<minsubsetsumdiff(arr)<<endl;
     return 0;
 }
 

@@ -13,8 +13,8 @@ Explanation: 11 = 5 + 5 + 1
 
 Constraints:
 1 <= coins.length <= 12
-1 <= coins[i] <= 231 - 1
-0 <= amount <= 104
+1 <= coins[i] <= 2^31 - 1
+0 <= amount <= 10^4
 */
 
 #include<bits/stdc++.h>
